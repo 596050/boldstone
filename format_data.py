@@ -3,6 +3,13 @@
 """
 Created on Thu Feb 24 19:34:31 2022
 
+https://business.facebook.com/business/help/120325381656392?id=725943027795860
+https://www.facebook.com/business/help/526764014610932?id=725943027795860
+https://business.facebook.com/commerce/catalogs/1638438493182970/feeds/351548610213919/overview?business_id=2380586078685156
+https://www.facebook.com/business/help/1535453216800644
+
+https://business.facebook.com/commerce/326960679342026/shops?business_id=2380586078685156
+
 @author: pricet
 """
 
@@ -71,6 +78,13 @@ for index, row in new_catalog_products.iterrows():
         new_catalog_products.loc[index,'shipping_weight' ] = str(new_catalog_products.loc[index,'shipping_weight' ]) + " " + "g"
     new_catalog_products.loc[index,'link' ] = product_base_url + "/" + str(new_catalog_products.loc[index,'link' ])
 
+
+
+### Fields to add:
+#additional_image_link
+#google_product_category
+#fb_product_category
+
+
 compression_opts = dict(method=None, archive_name='boldstone_facebook_products.csv')  
 new_catalog_products.to_csv('boldstone_facebook_products.csv', index=False) 
-
